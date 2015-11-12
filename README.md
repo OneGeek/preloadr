@@ -24,13 +24,13 @@ the previous one has finished - note that 'finished' does not mean loaded, the i
 ``` js
 preloadr(['img1.png', 'img2.png'],
     function (images) {
-        console.log('I've loaded ' + images.length + ' images !');
-        // => "I've loaded 2 images"
+        console.log('I\'ve loaded ' + images.length + ' images !');
+        // => I've loaded 2 images
     },
     function (images) {
-        console.log('I've juste loaded : ' + image.src);
-        // => "I've just loaded img1.png"
-        // => "I've just loaded img2.png"
+        console.log('I\'ve just loaded : ' + image.src);
+        // => I've just loaded img1.png
+        // => I've just loaded img2.png
     },
     false
 );
