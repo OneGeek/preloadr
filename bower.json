@@ -1,0 +1,26 @@
+{
+  "name": "preloadr",
+  "main": "preloadr.js",
+  "version": "1.0.1",
+  "homepage": "https://github.com/borisschapira/preloadr",
+  "description": "Tiny javascript preloader for images optionally with sequential loading",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "tiny",
+    "image",
+    "preloader"
+  ],
+  "authors": [
+    "Boris Schapira"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
