@@ -15,7 +15,9 @@ function preloadr(srcCollection, callbackOne, callbackAll, sequential) {
     var imgCollection = srcCollection instanceof Array ? [] : {};
     var srcIndexArray = [];
     for (var key in srcCollection) {
-        srcIndexArray.push(key);
+        if (Object.prototype.hasOwnProperty.call(srcCollection, key)) {
+            srcIndexArray.push(key);
+        }
     }
 
     function onEvent(index) {
@@ -57,12 +59,10 @@ function preloadr(srcCollection, callbackOne, callbackAll, sequential) {
 
             if (!sequential) {
                 imgCollection[srcIndexArray[i]].src = srcCollection[srcIndexArray[i]].src;
-                imgCollection[srcIndexArray[i]].props = srcCollection[srcIndexArray[i]].props;
             }
         }
         if (sequential) {
             imgCollection[srcIndexArray[0]].src = srcCollection[srcIndexArray[0]];
-			imgCollection[srcIndexArray[i]].props = srcCollection[srcIndexArray[i]].props;
         }
     }
 }
